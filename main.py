@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+
 def create_app() -> FastAPI:
   app = FastAPI()
   
@@ -8,7 +9,7 @@ def create_app() -> FastAPI:
     return {"status": "ok"}
   
   @app.get("/health")
-  def read_root():
+  def health():
     return {"status": "healthy"}
 
   return app
